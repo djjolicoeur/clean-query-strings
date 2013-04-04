@@ -1,6 +1,6 @@
 # clean-query-strings
 
-I seem to keep running into scenarios where I need to ensure only one copy of each query string key is passed to my web apps.  Since I've had to do this a few times, and Im a fan of keeping things dry, I figured I'd stick it up here for anyone to use.  clean-query-strings will check the incoming query string and throw an exception if there are multiple instances of a parameter.  By default ring.middleware.params will merge conj these into a vector.  If you want to prevent that from happening as I frequently do to prevent ambiguous behaviour, you can use this wrapper to throw an exception on duplicate query string parameter keys. 
+I seem to keep running into scenarios where I need to ensure only one copy of each query string key is passed to my web apps.  Since I've had to do this a few times, and Im a fan of keeping things dry, I figured I'd stick it up here for anyone to use.  clean-query-strings will check the incoming query string and throw an exception if there are multiple instances of a parameter.  By default ring.middleware.params will conj these into a vector.  If you want to prevent that from happening as I frequently do to prevent ambiguous behaviour, you can use this wrapper to throw an exception on duplicate query string parameter keys. 
 
 ## Usage
 
