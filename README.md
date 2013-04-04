@@ -4,18 +4,18 @@ I seem to keep running into scenarios where I need to ensure only one copy of ea
 
 ## Usage
 
-##In project.clj dependencies
+###In project.clj dependencies
 ```clojure
 []
 ``` 
 
-##In your app 
+###In your app 
 
 ```clojure
 (:require [clean-query-strings.core :as cqs])
 ```
 
-##Implementation
+###Implementation
 
 The following example uses the included wrap-exceptions wrapper.  This will handle the exception thrown by wrap-clean-query and return a 400 bad request HTTP status with a text body as well as catch any other exceptions with a 500 status.  If you wish to write your own handler, you can use the example below to extend and replace cqs/wrap-exceptions with your exception wrapper. 
 
@@ -29,6 +29,8 @@ The following example uses the included wrap-exceptions wrapper.  This will hand
       cqs/wrap-clean-query
       cqs/wrap-exceptions))
 ```
+
+Example wrap-exceptions.  This should be the last fuction applied to your handler.  You can use this as a template and add your custom exception handling/reponses.
 
 ```clojure
 (defn wrap-exceptions [f]
@@ -44,7 +46,7 @@ The following example uses the included wrap-exceptions wrapper.  This will hand
 ```
 
 
-# License
+## License
 
 Copyright © 2013 Daniel Jolicoeur
 
