@@ -6,7 +6,7 @@ I seem to keep running into scenarios where I need to ensure only one copy of ea
 
 ###In project.clj dependencies
 ```clojure
-[]
+[clean-query-strings "0.1.0-SNAPSHOT"]
 ``` 
 
 ###In your app 
